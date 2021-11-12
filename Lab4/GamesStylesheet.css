@@ -1,0 +1,282 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root {
+    --main-color1: #200122;
+    --main-color2: #6f0000;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #C0C0C0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: floralwhite;
+}
+
+/******HEADER SECTION STYLING******/
+/*.landing_page {*/
+    /*background: linear-gradient(var(--main-color1), var(--main-color2));*/
+    /*background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('Images/fabian-albert--yePUylDPJQ-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}*/
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0 3rem 0;
+}
+
+
+/******HERO SECTION STYLING******/
+
+.hero {
+    width: 95%;
+    height: 25rem;
+    color: floralwhite;
+    margin: 0 auto;
+}
+
+    .hero .hero_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        grid-gap: 1rem;
+        text-align: center;
+    }
+
+.hero .hero_title {
+    text-align: left;
+}
+
+.hero .hero_title h1 {
+    font-size: 4rem;
+}
+
+.hero .hero_pictures img {
+    position: relative;
+    top: 35px;
+    width: 80%;
+    height: auto;
+    z-index: 100;
+    border-radius: 10px;
+    filter: brightness(85%);
+}
+
+#slide_show_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slide_show_container .slide_show_images {
+    width: 60%;
+    height: 30rem;
+    margin: auto;
+    position: relative;
+}
+
+#slide_show_container .slide_show_images img {
+    width: 12.5rem;
+    height: 18rem;
+    position: absolute;
+
+}
+
+/******SEARCH STYLING******/
+
+.content {
+    text-align: center;
+    width: 80%;
+    margin: 3em auto 0 auto;
+}
+
+.content h2 {
+    font-size: 2rem;
+}
+
+.content .display-content {
+    margin-top: 1.3rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content .display-content .filter {
+    width: 31%;
+}
+
+.content .display-content .price-box {
+    width: 31%
+}
+
+.display-section {
+    max-width: 95%;
+    margin: auto;
+}
+
+#gameList {
+    padding-top: 2rem;
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+
+#gameList li {
+    padding: 1em;
+    background-color: black;
+    color: purple;
+    text-align: center;
+    transition: 400ms opacity;
+    will-change: opacity;
+    padding: 0;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        'title image'
+        'price image'
+        'button image'
+}
+
+#gameList li img {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#gameList li .drop-down {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: transparent;
+    color: purple;
+    cursor: pointer;
+    border-color: transparent;
+    font-size: 1.5rem;
+}
+
+#gameList li .collapse {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    transition: 300ms ease-in-out;
+    display: none;
+}
+
+#gameList li:hover {
+    box-shadow: 0px 0px 0px 5px rgba(100, 100, 100, .2);
+}
+
+#gameList li h2, #gameList li p {
+    padding-top: 10px;
+}
+
+#gameList li img {
+    grid-area: image;
+    max-height: 150px;
+    border-radius: 3px;
+}
+
+.add_game {
+    margin-top: 2.5rem;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('Images/fabian-albert--yePUylDPJQ-unsplash.jpg');
+    padding: 2rem;
+}
+
+.game_add {
+    text-align: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.textbox-wdith {
+    height: 2rem;
+    margin: 3px;
+}
+
+.button {
+    text-align: center;
+    margin: auto;
+    margin-top: 1.2rem;
+}
+
+#errorText {
+    color: white;
+    padding-bottom: .5rem;
+}
+
+#btn_submit {
+    width: 2rem;
+    border: 1px transparent;
+    border-radius: 5px;
+    color: white;
+    height: 1.7rem;
+}
+
+#btn_add_game {
+    width: 7rem;
+    height: 1.56rem;
+    border: 1px transparent;
+    color: white;
+    background: linear-gradient(var(--main-color1),purple);
+    transition: 300ms ease-in-out;
+}
+
+#btn_add_game:hover {
+    background: linear-gradient(purple,var(--main-color1));
+    cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .header_container {
+        flex-direction: column;
+    }
+
+    .content .display-content {
+        display: block;
+        margin: 1.3rem auto auto auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .content .display-content .filter {
+        width: 100%;
+    }
+
+    .content .display-content .price-box {
+        display: block;
+    }
+
+    .game_add {
+        width: 100%;
+        display: block;
+    }
+
+    #game_description {
+        height: 3.5rem;
+    }
+
+    .textbox-wdith {
+        width: 100%;
+        height: 2rem;
+        margin-bottom: 2px;
+    }
+}

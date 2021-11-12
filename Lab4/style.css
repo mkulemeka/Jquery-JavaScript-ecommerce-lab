@@ -1,0 +1,115 @@
+﻿body {
+    background-color: darkgrey;
+}
+
+.navbar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0 3rem 0;
+}
+
+.page-options {
+    
+    padding: 4rem 0 4rem 0;
+}
+
+.page-options .btn_position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-section .add_video_game, .edit-section .edit_game {
+    text-align: center;
+    border-radius: 5px;
+}
+
+.add-section .new-game-input .platform {
+    border: 1px solid white;
+   
+}
+
+.new-game-input {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 0.3rem;
+   padding-top: 1rem;
+}
+
+.new-game-input .textbox-wdith {
+    border-radius: 5px;
+}
+
+.new-game-input .checkboxes {
+    display: inline-block;
+    padding: 0 .5rem 0 .5rem;
+}
+
+.edit-section {
+    padding-top: 1rem;
+}
+
+.edit-section .input-group {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5rem;
+}
+
+#displayArea {
+    padding: 0;
+}
+
+#displayArea li {
+    display: grid;
+    max-width: 30rem;
+    height: auto;
+    margin: auto auto 2rem auto;
+    list-style: none;
+    border-radius: 7px;
+}
+
+#displayArea li .img-fluid {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+#displaArea li h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#displayArea li > .buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#displayArea .btn {
+    margin-bottom: .5rem;
+}
+
+
+@media (max-width: 780px) {
+    .new-game-input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #displayArea {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #displaArea li img {
+        width: 100%;
+        height: auto;
+    }
+ }

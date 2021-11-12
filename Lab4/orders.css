@@ -1,0 +1,40 @@
+﻿#orders .orderContainer {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+#orders .orderContainer > img {
+    max-width: 8rem;
+    height: 8rem;
+}
+
+#orders .orderContainer > div {
+    padding: 0 1rem 0 1rem;
+}
+
+#orders .orderContainer > button {
+    border-radius: 5px;
+    color: white;
+    background: hsl(0 0% 10%);
+    transition: 300ms ease-in-out;
+    justify-content: flex-end;
+}
+
+#orders .orderContainer > button:hover {
+    opacity: 0.7;
+
+}
+
+@media (max-width: 780px) {
+    #orders .orderContainer {
+        flex-direction: column;
+    }
+
+    #orders .orderContainer > img {
+        max-width: 100%;
+        height: 12rem;
+    }
+}
